@@ -1,0 +1,2 @@
+macroblock.c: add prints after reconstruction of motion vectors in readMBMotionVectors
+Makefile: add -fcommon to CFLAGS

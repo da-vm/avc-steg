@@ -1,0 +1,8 @@
+global.h: add struct secret in struct videoparameters
+lencod.c: add initial structure in init_encoder
+params.h: define max size (10 000) and char secret_bits[MAX_SECRET_BITS_SIZE]
+embed.c
+embed.h
+macroblock.c: add embedding call in writeMotionVectors8x8 and include embed.h
+Makefile: add -fcommon to CFLAGS
+configfile.h: add SecretBits config option
