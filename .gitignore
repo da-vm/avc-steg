@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# venv
+venv/
+
+# JM encoder/decoder build
+JM/bin/*.exe
+
+# files
+files/*.txt
+files/*.yuv
+files/*.h264
+files/*.cfg
+!files/secret.txt
