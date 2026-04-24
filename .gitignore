@@ -9,6 +9,7 @@ venv/
 
 # JM encoder/decoder build
 JM/bin/*.exe
+JM/bin/*.txt
 
 # files
 files/*.txt
