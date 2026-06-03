@@ -9,10 +9,10 @@ def process_txt(txt_file):
     '''
     Takes a .txt file and converts its contents to str
     '''
-    txt_path = os.path.join(FILES, txt_file)
+    txt_path = os.path.join(FILES, "in", txt_file)
     
-    with open(txt_path, 'r') as f:
-        data = f.read().replace('\n', '|')
+    with open(txt_path, 'rb') as f:
+        data = f.read()
     
     return data
 
@@ -32,6 +32,10 @@ def process_string(msg):
     total_bits = pad_bits + msg_bits
 
     return total_bits
+
+def process_sig(msg):
+
+    return ''.join(format(b,'08b') for b in msg)
 
 def extract_mvs_from_trace(mv_txt):
 
@@ -78,3 +82,33 @@ def extract_string(array):
     msg_chars = [chr(int(msg_bits[i:i+8], 2)) for i in range(0, len(msg_bits), 8)]
 
     return ''.join(msg_chars)
+
+def extract_string_MAYO(array):
+
+    sig_bitlength = 681 * 8
+
+    sig_bits = extract_bitstring(array, sig_bitlength)
+
+    sig_bytes = bytes([int(sig_bits[i:i+8], 2) for i in range(0, len(sig_bits), 8)])
+
+    return sig_bytes
+
+def extract_string_HAWK(array):
+
+    sig_bitlength = 1221 * 8
+
+    sig_bits = extract_bitstring(array, sig_bitlength)
+
+    sig_bytes = bytes([int(sig_bits[i:i+8], 2) for i in range(0, len(sig_bits), 8)])
+
+    return sig_bytes
+
+def extract_string_SQIsign(array):
+
+    sig_bitlength = 148 * 8
+
+    sig_bits = extract_bitstring(array, sig_bitlength)
+
+    sig_bytes = bytes([int(sig_bits[i:i+8], 2) for i in range(0, len(sig_bits), 8)])
+
+    return sig_bytes

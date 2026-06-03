@@ -12,8 +12,12 @@ JM/bin/*.exe
 JM/bin/*.txt
 
 # files
-files/*.txt
-files/*.yuv
-files/*.h264
-files/*.cfg
-!files/secret.txt
+files/in/*.txt
+files/MAYO
+files/out
+files/temp
+
+# MAYO compiled
+process/MAYO/keygen
+process/MAYO/sign
+process/MAYO/verify

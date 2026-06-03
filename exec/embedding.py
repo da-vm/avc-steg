@@ -1,4 +1,4 @@
-from process.process import process_txt, process_string
+from process.process import process_txt, process_sig
 import sys
 import os
 import subprocess
@@ -12,9 +12,9 @@ FILES  = os.path.join(BASE, "files")
 
 def run_encoder(secret_bits, input_file, output_file):
     # secret_path = os.path.join(FILES, secret_file)
-    input_path  = os.path.join(FILES, input_file)
-    output_path = os.path.join(FILES, output_file)
-    cfg_path = os.path.join(FILES, "tmp_encoder.cfg")
+    input_path  = os.path.join(FILES, "in", input_file)
+    output_path = os.path.join(FILES, "temp", output_file)
+    cfg_path = os.path.join(FILES, "temp", "tmp_encoder.cfg")
 
     with open(cfg_path, "w") as f:
         f.write(f"InputFile = {input_path}\n")
@@ -26,5 +26,5 @@ def run_encoder(secret_bits, input_file, output_file):
 if __name__ == "__main__":
     secret_file = sys.argv[1]
     secret_string = process_txt(secret_file)
-    secret_bits = process_string(secret_string)
+    secret_bits = process_sig(secret_string)
     run_encoder(secret_bits, "input_clean.y4m", "output_JMe.h264")
