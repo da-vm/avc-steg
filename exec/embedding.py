@@ -25,6 +25,7 @@ def run_encoder(secret_bits, input_file, output_file):
 
 if __name__ == "__main__":
     secret_file = sys.argv[1]
+    input_file  = sys.argv[2]
     secret_string = process_txt(secret_file)
     secret_bits = process_sig(secret_string)
-    run_encoder(secret_bits, "input_clean.y4m", "output_JMe.h264")
+    run_encoder(secret_bits, input_file, "output_JMe.h264")

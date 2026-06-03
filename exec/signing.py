@@ -4,7 +4,7 @@ import subprocess
 import hashlib
 
 BASE   = os.path.expanduser("~/avc-steg")
-MAYO   = os.path.join(BASE, "exec/MAYO")
+MAYO   = os.path.join(BASE, "process/MAYO")
 FILES  = os.path.join(BASE, "files")
 
 def keygen():

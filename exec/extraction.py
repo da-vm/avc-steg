@@ -5,7 +5,7 @@ import subprocess
 import hashlib
 
 BASE   = os.path.expanduser("~/avc-steg")
-MAYO   = os.path.join(BASE, "exec/MAYO")
+MAYO   = os.path.join(BASE, "process/MAYO")
 JM_BIN = os.path.join(BASE, "JM/bin")
 FILES  = os.path.join(BASE, "files")
 
