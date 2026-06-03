@@ -14,9 +14,12 @@ JM/bin/*.yuv
 
 # files
 files/in/*.txt
-files/MAYO
-files/out
-files/temp
+files/MAYO/*
+files/out/*
+files/temp/*
+!files/MAYO/.gitkeep
+!files/out/.gitkeep
+!files/temp/.gitkeep
 
 # MAYO compiled
 process/MAYO/keygen
