@@ -28,3 +28,4 @@ The extraction script extracts the motion vectors from the encoded bitstream, re
 - Currently does not natively support playable output video, requires conversion from `.yuv`.
 - Assumes knowledge of public key on receiver's end.
 - Currently restricted to MAYO-3 signatures.
+- Requires input video in `.y4m` format.
