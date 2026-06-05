@@ -3,6 +3,7 @@ Modified H.264/AVC encoder/decoder that allows for video authentication by embed
 ## Dependencies
 - [MAYO](https://github.com/PQCMayo/MAYO-C) is required to compile signature algorithms in `process/MAYO`.
 - JM (reference H.264 software) requires building of `lencod` and `ldecod` executables in `JM/bin`.
+- Signature algorithms `keygen`, `sign`, `verify` require compiling by `gcc -O2 -o <name> <name>.c -I<path>/MAYO-C/include -I<path>/MAYO-C/src/mayo_3 -L<path>/MAYO-C/build/src -DMAYO_VARIANT=MAYO_3 -DMAYO_BUILD_TYPE_AVX2 -lmayo_3 -lmayo_common_sys`.
 
 ## Usage
 ### Key generation and signing
